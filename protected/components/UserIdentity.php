@@ -17,7 +17,7 @@ class UserIdentity extends CUserIdentity
 	 */
 	public function authenticate()
 	{
-		$users=array(
+		/*$users=array(
 			// username => password
 			'demo'=>'demo',
 			'admin'=>'admin',
@@ -28,6 +28,21 @@ class UserIdentity extends CUserIdentity
 			$this->errorCode=self::ERROR_PASSWORD_INVALID;
 		else
 			$this->errorCode=self::ERROR_NONE;
+		return !$this->errorCode;*/
+            $user=Usuario::model()->findByAttributes(array(
+			'email'=>$this->username
+			));
+		$this->password = hash_hmac('sha256', $this->password,	Yii::app()->params['encryptionKey']);
+
+		if($user===null)
+			$this->errorCode=self::ERROR_USERNAME_INVALID;
+		elseif($user->password!== $this->password)
+			$this->errorCode=self::ERROR_PASSWORD_INVALID;
+		else
+		{
+			Yii::app()->session['id'] = $user->idusuario;
+			$this->errorCode=self::ERROR_NONE;
+		}
 		return !$this->errorCode;
 	}
 }
