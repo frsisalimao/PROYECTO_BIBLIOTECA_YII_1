@@ -50,4 +50,9 @@ $this->breadcrumbs=array(
 	</div>
 
 <?php $this->endWidget(); ?>
+        <?php $this->widget('zii.widgets.CMenu',array(
+      'items'=>array(
+        array('label'=>Yii::t('traductor','Register'), 'url'=>array('/usuario/create')),
+         ),
+    )); ?>
 </div><!-- form -->

@@ -19,11 +19,11 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
-	<div class="row">
+	<!--<div class="row">
 		<?php echo $form->labelEx($model,'idcompra'); ?>
 		<?php echo $form->textField($model,'idcompra'); ?>
 		<?php echo $form->error($model,'idcompra'); ?>
-	</div>
+	</div>-->
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'fecha'); ?>
@@ -49,11 +49,11 @@
 		<?php echo $form->error($model,'estado'); ?>
 	</div>
 
-	<div class="row">
+<!--	<div class="row">
 		<?php echo $form->labelEx($model,'usuario_idusuario'); ?>
 		<?php echo $form->textField($model,'usuario_idusuario'); ?>
 		<?php echo $form->error($model,'usuario_idusuario'); ?>
-	</div>
+	</div>-->
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>

@@ -33,7 +33,7 @@ class Reserva extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('idreserva, usuario_idusuario', 'required'),
+			array('usuario_idusuario', 'required'),
 			array('idreserva, usuario_idusuario', 'numerical', 'integerOnly'=>true),
 			array('fecha, hora, total, estado', 'length', 'max'=>45),
 			// The following rule is used by search().
@@ -93,7 +93,7 @@ class Reserva extends CActiveRecord
 		$criteria->compare('hora',$this->hora,true);
 		$criteria->compare('total',$this->total,true);
 		$criteria->compare('estado',$this->estado,true);
-		$criteria->compare('usuario_idusuario',$this->usuario_idusuario);
+		$criteria->compare('usuario_idusuario',Yii::app()->session['id']);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

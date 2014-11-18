@@ -19,11 +19,11 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
-	<div class="row">
+	<!--<div class="row">
 		<?php echo $form->labelEx($model,'idcatalogo_ruta'); ?>
 		<?php echo $form->textField($model,'idcatalogo_ruta'); ?>
 		<?php echo $form->error($model,'idcatalogo_ruta'); ?>
-	</div>
+	</div>-->
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'ciudad_origen'); ?>
@@ -32,9 +32,9 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'catalogo_rutacol'); ?>
-		<?php echo $form->textField($model,'catalogo_rutacol',array('size'=>45,'maxlength'=>45)); ?>
-		<?php echo $form->error($model,'catalogo_rutacol'); ?>
+		<?php echo $form->labelEx($model,'ciudad_destino'); ?>
+		<?php echo $form->textField($model,'ciudad_destino',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->error($model,'ciudad_destino'); ?>
 	</div>
 
 	<div class="row">

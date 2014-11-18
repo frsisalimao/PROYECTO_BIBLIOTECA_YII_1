@@ -13,8 +13,8 @@
 	<?php echo CHtml::encode($data->ciudad_origen); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('catalogo_rutacol')); ?>:</b>
-	<?php echo CHtml::encode($data->catalogo_rutacol); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('ciudad_destino')); ?>:</b>
+	<?php echo CHtml::encode($data->ciudad_destino); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('costo')); ?>:</b>

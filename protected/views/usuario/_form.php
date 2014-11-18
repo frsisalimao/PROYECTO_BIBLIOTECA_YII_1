@@ -19,11 +19,11 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
-	<div class="row">
+	<!--<div class="row">
 		<?php echo $form->labelEx($model,'idusuario'); ?>
 		<?php echo $form->textField($model,'idusuario'); ?>
 		<?php echo $form->error($model,'idusuario'); ?>
-	</div>
+	</div> -->
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'email'); ?>
@@ -60,6 +60,7 @@
 		<?php echo $form->passwordField($model,'password',array('size'=>45,'maxlength'=>45)); ?>
 		<?php echo $form->error($model,'password'); ?>
 	</div>
+        
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'estado'); ?>

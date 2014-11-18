@@ -6,7 +6,7 @@
  * The followings are the available columns in table 'catalogo_ruta':
  * @property integer $idcatalogo_ruta
  * @property string $ciudad_origen
- * @property string $catalogo_rutacol
+ * @property string $ciudad_destino
  * @property string $costo
  *
  * The followings are the available model relations:
@@ -30,12 +30,12 @@ class CatalogoRuta extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('idcatalogo_ruta', 'required'),
+		//	array('idcatalogo_ruta', 'required'),
 			array('idcatalogo_ruta', 'numerical', 'integerOnly'=>true),
-			array('ciudad_origen, catalogo_rutacol, costo', 'length', 'max'=>45),
+			array('ciudad_origen, ciudad_destino, costo', 'length', 'max'=>45),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idcatalogo_ruta, ciudad_origen, catalogo_rutacol, costo', 'safe', 'on'=>'search'),
+			array('idcatalogo_ruta, ciudad_origen, ciudad_destino, costo', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -59,7 +59,7 @@ class CatalogoRuta extends CActiveRecord
 		return array(
 			'idcatalogo_ruta' => 'Idcatalogo Ruta',
 			'ciudad_origen' => 'Ciudad Origen',
-			'catalogo_rutacol' => 'Catalogo Rutacol',
+			'ciudad_destino' => 'Ciudad Destino',
 			'costo' => 'Costo',
 		);
 	}
@@ -84,7 +84,7 @@ class CatalogoRuta extends CActiveRecord
 
 		$criteria->compare('idcatalogo_ruta',$this->idcatalogo_ruta);
 		$criteria->compare('ciudad_origen',$this->ciudad_origen,true);
-		$criteria->compare('catalogo_rutacol',$this->catalogo_rutacol,true);
+		$criteria->compare('ciudad_destino',$this->ciudad_destino,true);
 		$criteria->compare('costo',$this->costo,true);
 
 		return new CActiveDataProvider($this, array(

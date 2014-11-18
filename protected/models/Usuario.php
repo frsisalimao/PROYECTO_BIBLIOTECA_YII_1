@@ -22,6 +22,7 @@ class Usuario extends CActiveRecord {
     /**
      * @return string the associated database table name
      */
+      public $passwordCompare;
     public function tableName() {
         return 'usuario';
     }
@@ -33,13 +34,14 @@ class Usuario extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('idusuario, email', 'required'),
+            array('email', 'required'),
             array('idusuario', 'numerical', 'integerOnly' => true),
             array('email, cedula, nombre, telefono, direccion, password, estado', 'length', 'max' => 45),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
             array('idusuario, email, cedula, nombre, telefono, direccion, password, estado', 'safe', 'on' => 'search'),
-        );
+         //    array('password', 'compare', 'compareAttribute'=>'passwordCompare'),
+            );
     }
 
     /**

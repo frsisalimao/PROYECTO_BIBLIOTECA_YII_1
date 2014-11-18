@@ -19,11 +19,11 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
-	<div class="row">
+<!--	<div class="row">
 		<?php echo $form->labelEx($model,'idreserva'); ?>
 		<?php echo $form->textField($model,'idreserva'); ?>
 		<?php echo $form->error($model,'idreserva'); ?>
-	</div>
+	</div>-->
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'fecha'); ?>
@@ -49,11 +49,11 @@
 		<?php echo $form->error($model,'estado'); ?>
 	</div>
 
-	<div class="row">
+<!--	<div class="row">
 		<?php echo $form->labelEx($model,'usuario_idusuario'); ?>
 		<?php echo $form->textField($model,'usuario_idusuario'); ?>
 		<?php echo $form->error($model,'usuario_idusuario'); ?>
-	</div>
+	</div> -->
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>

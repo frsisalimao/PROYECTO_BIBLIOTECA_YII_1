@@ -23,7 +23,7 @@ $this->menu=array(
 	'attributes'=>array(
 		'idcatalogo_ruta',
 		'ciudad_origen',
-		'catalogo_rutacol',
+		'ciudad_destino',
 		'costo',
 	),
 )); ?>

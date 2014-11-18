@@ -22,8 +22,8 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'catalogo_rutacol'); ?>
-		<?php echo $form->textField($model,'catalogo_rutacol',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->label($model,'ciudad_destino'); ?>
+		<?php echo $form->textField($model,'ciudad_destino',array('size'=>45,'maxlength'=>45)); ?>
 	</div>
 
 	<div class="row">
